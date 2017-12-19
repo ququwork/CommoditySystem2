@@ -2,7 +2,7 @@
 #define OVERSEACOMMODITY_H
 #include <string>
 #include "commodity.h"
-class OverseaCommodity : public Commodity{
+class OverseaCommodity : public Commodity{  
 public:
     OverseaCommodity(long id,std::string name,
                      double p=0,int n=0,double d=1.0,double t=0);
