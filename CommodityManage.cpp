@@ -1,6 +1,6 @@
 #include <iostream>
 #include "CommodityManage.h"
-#include "Commodity.h"
+#include "Commodity.h"  
 #include <string>
 #include <fstream>
 #include "normalcommodity.h"
@@ -44,7 +44,7 @@ void CommodityManage::addCommodity(Commodity *p)
     Commodity *pCommodity = findCommodityById(p->getId());
     if (pCommodity != nullptr)
     {
-        cout << "±àºÅÎª" << p->getId() << "µÄÉÌÆ·ÒÑ¾­´æÔÚ!ÀÛ¼ÓÆäÊýÁ¿\n";
+        cout << "ç¼–å·ä¸º" << p->getId() << "çš„å•†å“å·²ç»å­˜åœ¨!ç´¯åŠ å…¶æ•°é‡\n";
         pCommodity->setNum(pCommodity->getNum() + p->getNum());
 
         return;
@@ -58,7 +58,7 @@ void CommodityManage::removeCommodity(int id)
     Commodity *pCommodity = findCommodityById(id);
     if (pCommodity == nullptr)
     {
-        cout << "±àºÅÎª" << id << "µÄÉÌÆ·²»´æÔÚ!\n";
+        cout << "ç¼–å·ä¸º" << id << "çš„å•†å“ä¸å­˜åœ¨!\n";
         return;
     }
     //Commodity *pNext;
@@ -70,7 +70,7 @@ void CommodityManage::removeCommodity(int id)
         pos--;
     }
     while (pos < pCommodities + size)
-    { //ÒÆ¶¯Ö¸ÕëÊý×éÖÐµÄÔªËØ
+    { //ç§»åŠ¨æŒ‡é’ˆæ•°ç»„ä¸­çš„å…ƒç´ 
         *pos = *(pos + 1);
         pos++;
     }
@@ -81,14 +81,14 @@ void CommodityManage::viewCommodity(int id) const
     Commodity *pCommodity = findCommodityById(id);
     if (pCommodity == nullptr)
     {
-        cout << "±àºÅÎª" << id << "µÄÉÌÆ·²»´æÔÚ!\n";
+        cout << "ç¼–å·ä¸º" << id << "çš„å•†å“ä¸å­˜åœ¨!\n";
         return;
     }
     pCommodity->output();
 }
 void CommodityManage::viewAllCommodities() const
 {
-    cout << "ÉÌÆ·ÖÖÀà:" << size << endl;
+    cout << "å•†å“ç§ç±»:" << size << endl;
     for (int i = 0; i < size; ++i)
         pCommodities[i]->output();
 }
@@ -96,12 +96,12 @@ void CommodityManage::checkOut() const
 {
     double totalPrice = 0;
     int totalNum = 0;
-    cout << "ÉÌÆ·ÖÖÀà: " << size << endl;
-    cout << " ÉÌÆ·Ãû³Æ\t\t"
-         << "¼Û¸ñ\t"
-         << "¼þÊý\t"
-         << "ÕÛ¿Û\t"
-         << "×Ü¼Û\n";
+    cout << "å•†å“ç§ç±»: " << size << endl;
+    cout << " å•†å“åç§°\t\t"
+         << "ä»·æ ¼\t"
+         << "ä»¶æ•°\t"
+         << "æŠ˜æ‰£\t"
+         << "æ€»ä»·\n";
     for (int i = 0; i < size; ++i)
     { /////////kkk
 
@@ -115,8 +115,8 @@ void CommodityManage::checkOut() const
         totalNum += pCommodities[i]->getNum();
     }
 
-    cout << "¹ºÎïÀºÉÌÆ·×Ü¼þÊý: " << totalNum << "\n";
-    cout << "¹ºÎïÀº½áËã×Ü¼Û: " << totalPrice << endl;
+    cout << "è´­ç‰©ç¯®å•†å“æ€»ä»¶æ•°: " << totalNum << "\n";
+    cout << "è´­ç‰©ç¯®ç»“ç®—æ€»ä»·: " << totalPrice << endl;
 }
 
 void CommodityManage::saveData(string filename)
@@ -164,7 +164,7 @@ void CommodityManage::readData(string filename)
         {
             in >> type;
             in >> id;
-            getline(in, buf); //¶ÁÈ¡ id ºó²ÐÁôµÄ»Ø³µÒª¶Áµ½ buf ÖÐ
+            getline(in, buf); //è¯»å– id åŽæ®‹ç•™çš„å›žè½¦è¦è¯»åˆ° buf ä¸­
             getline(in, name);
             in >> price >> num;
             if (type == 0)
