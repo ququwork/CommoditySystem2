@@ -11,3 +11,4 @@ void doViewAllCommodity(const CommodityManage& cm);
 void doCheckout(const CommodityManage& cm);
 
 #endif // FUNCTION_H
+  
