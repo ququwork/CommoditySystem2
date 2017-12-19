@@ -18,3 +18,4 @@ private:
     double discount;
 };
 #endif // NORMALCOMMODITY_H
+ 
