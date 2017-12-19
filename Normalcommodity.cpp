@@ -5,16 +5,16 @@ using namespace std;
 #include <sstream>
 
 int NormalCommodity::getType()const{
-    return 0; //0 ±íÊ¾ÆÕÍ¨ÉÌÆ·
+    return 0; //0 è¡¨ç¤ºæ™®é€šå•†å“
 }
 string NormalCommodity::getInfo()const{
     ostringstream ostr;
-    ostr<<getType()<<" "; //ÏÈÊä³öÀàĞÍ±àÂë
-    ostr<<Commodity::getInfo(); //Êä³ö»ùÀàµÄĞÅÏ¢
-    ostr<<discount<<endl; //Êä³ö×ÓÀàĞÅÏ¢
+    ostr<<getType()<<" "; //å…ˆè¾“å‡ºç±»å‹ç¼–ç 
+    ostr<<Commodity::getInfo(); //è¾“å‡ºåŸºç±»çš„ä¿¡æ¯
+    ostr<<discount<<endl; //è¾“å‡ºå­ç±»ä¿¡æ¯
     return ostr.str();
 }
-
+  
 
 NormalCommodity::NormalCommodity(long id,std::string name,
                                  double p,int n,double d)
@@ -30,7 +30,7 @@ double NormalCommodity::getNetPrice()const{
 
 void NormalCommodity::output()const{
     Commodity::output();
-    cout<<" ÉÌÆ·×Ü¼Û:"<<getNetPrice()<<" (¼Û¸ñ:"
-       <<getPrice()<<", ÊıÁ¿:"<<getNum()<<", ÕÛ¿Û:"
+    cout<<" å•†å“æ€»ä»·:"<<getNetPrice()<<" (ä»·æ ¼:"
+       <<getPrice()<<", æ•°é‡:"<<getNum()<<", æŠ˜æ‰£:"
       <<discount<<" )\n";
 }
