@@ -2,7 +2,7 @@
 #define COMMODITY_H
 class Commodity{
 public:
-    Commodity()=default;
+    Commodity()=default;  
 
 
     Commodity(long i,std::string n,double p,int nn);
@@ -19,7 +19,7 @@ public:
 
     virtual double getNetPrice()const;
     virtual void output()const;
-    virtual int getType()const=0; //纯虚函数
+    virtual int getType()const=0; //绾櫄鍑芥暟
     virtual std::string getInfo()const;
 
     static void setNextId(long id){nextId=id;}
@@ -27,8 +27,8 @@ public:
 private:
     long id;
     std::string name;
-    double price; //商品数量
-    int num; //购买数量
+    double price; //鍟嗗搧鏁伴噺
+    int num; //璐拱鏁伴噺
     static long nextId;/////////
     double discount;
     long autoNextId(){return nextId++;}
