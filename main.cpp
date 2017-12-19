@@ -5,9 +5,9 @@
 #include "function.h"
 using namespace std;
 int main(){
-    cout<<"»¶Ó­Ê¹ÓÃ¹ºÎïÀº¹ÜÀíÏµÍ³!\n";
+    cout<<"æ¬¢è¿Žä½¿ç”¨è´­ç‰©ç¯®ç®¡ç†ç³»ç»Ÿ!\n";
     char choice;
-    CommodityManage cm;
+    CommodityManage cm; 
     cm.readData("commodity04.data");
     while(true){
         choice=menu();
@@ -30,11 +30,11 @@ int main(){
             doCheckout(cm);
             break;
         default:
-            cout<<"ÎÞÐ§ÊäÈë! ÇëÖØÊÔ!\n";
+            cout<<"æ— æ•ˆè¾“å…¥! è¯·é‡è¯•!\n";
             break;
         }
     }
-    cout<<"ÔÙ¼û!\n";
+    cout<<"å†è§!\n";
     cm.saveData("commodity04data");
 
 
