@@ -17,11 +17,11 @@ public:
 
     void readData(std::string filename);
     void saveData(std::string filename);
-private:
-    //Commodity *pCommodities; //Ö¸Ïò¶¯Ì¬´´½¨µÄÉÌÆ·Êı×é
-    Commodity **pCommodities; //Ö¸Ïò¶¯Ì¬´´½¨µÄÉÌÆ·Ö¸ÕëÊı×é
-    int maxSize; //µ±Ç°·ÖÅäµÄ¿Õ¼äÉÏÏŞ
-    int size; //Êµ¼ÊµÄÉÌÆ·ÊıÁ¿
+private:  
+    //Commodity *pCommodities; //æŒ‡å‘åŠ¨æ€åˆ›å»ºçš„å•†å“æ•°ç»„
+    Commodity **pCommodities; //æŒ‡å‘åŠ¨æ€åˆ›å»ºçš„å•†å“æŒ‡é’ˆæ•°ç»„
+    int maxSize; //å½“å‰åˆ†é…çš„ç©ºé—´ä¸Šé™
+    int size; //å®é™…çš„å•†å“æ•°é‡
     Commodity* findCommodityById(int id)const;
     void reAllocMemory();
 
