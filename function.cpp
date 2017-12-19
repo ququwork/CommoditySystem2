@@ -1,20 +1,20 @@
 
 #include <iostream>
 #include "function.h"
-#include "normalcommodity.h"
+#include "normalcommodity.h" 
 #include "overseacommodity.h"
 #include "ershou.h"
 #include "tejia.h"
 using namespace std;
 char menu()
 {
-    cout << " 0) ÍË³öÏµÍ³\n";
-    cout << " 1) Ïò¹ºÎïÀºÌí¼ÓÉÌÆ·\n";
-    cout << " 2) ´Ó¹ºÎïÀºÒÆ³ýÉÌÆ·\n";
-    cout << " 3) ²é¿´Ö¸¶¨ÉÌÆ·\n";
-    cout << " 4) ²é¿´ËùÓÐÉÌÆ·\n";
-    cout << " 5) ½áËã\n";
-    cout << "ÇëÊäÈë¹¦ÄÜÑ¡Ïî:";
+    cout << " 0) é€€å‡ºç³»ç»Ÿ\n";
+    cout << " 1) å‘è´­ç‰©ç¯®æ·»åŠ å•†å“\n";
+    cout << " 2) ä»Žè´­ç‰©ç¯®ç§»é™¤å•†å“\n";
+    cout << " 3) æŸ¥çœ‹æŒ‡å®šå•†å“\n";
+    cout << " 4) æŸ¥çœ‹æ‰€æœ‰å•†å“\n";
+    cout << " 5) ç»“ç®—\n";
+    cout << "è¯·è¾“å…¥åŠŸèƒ½é€‰é¡¹:";
     char choice;
     cin >> choice;
     return choice;
@@ -27,28 +27,28 @@ void doAddCommodity(CommodityManage &cm)
 
     double tariff, zhejiu;
     int num, type;
-    cout << "Ñ¡ÔñÉÌÆ·ÀàÐÍ(0-ÆÕÍ¨ÉÌÆ·£¬ 1-º£Íâ¹ºÉÌÆ·  2-¶þÊÖÉÌÆ· 3-ÌØ¼ÛÉÌÆ· )";
+    cout << "é€‰æ‹©å•†å“ç±»åž‹(0-æ™®é€šå•†å“ï¼Œ 1-æµ·å¤–è´­å•†å“  2-äºŒæ‰‹å•†å“ 3-ç‰¹ä»·å•†å“ )";
     cin >> type;
     fflush(stdin);
-    cout << "ÊäÈëÉÌÆ·Ãû³Æ:";
+    cout << "è¾“å…¥å•†å“åç§°:";
     getline(cin, name);
-    cout << "ÊäÈë¼Û¸ñºÍÉÌÆ·ÊýÁ¿:";
+    cout << "è¾“å…¥ä»·æ ¼å’Œå•†å“æ•°é‡:";
     cin >> price >> num;
     if (type == 0)
     {
-        cout << "ÊäÈëÉÌÆ·ÕÛ¿Û:";
+        cout << "è¾“å…¥å•†å“æŠ˜æ‰£:";
         cin >> discount;
         cm.addCommodity(new NormalCommodity(name, price, num, discount));
     }
     else if (type == 1)
     {
-        cout << "ÊäÈëÉÌÆ·ÕÛ¿ÛºÍ¹ØË°:";
+        cout << "è¾“å…¥å•†å“æŠ˜æ‰£å’Œå…³ç¨Ž:";
         cin >> discount >> tariff;
         cm.addCommodity(new OverseaCommodity(name, price, num, discount, tariff));
     }
     else if (type == 2)
     {
-        cout << "ÊäÈëÉÌÆ·ÕÛ¿ÛºÍÕÛ¾É³Ì¶È:";
+        cout << "è¾“å…¥å•†å“æŠ˜æ‰£å’ŒæŠ˜æ—§ç¨‹åº¦:";
         cin >> discount >> zhejiu;
         cm.addCommodity(new ershou(name, price, num, discount, zhejiu));
     }
