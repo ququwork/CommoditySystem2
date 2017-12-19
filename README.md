@@ -1,6 +1,9 @@
 # CommoditySystem2
-2.2 购物篮管理系统版本 4（继承与多态）
-2.2.1 继承与多态的分析与设计
+2.2 管理系统版本 4（继承与多态）
+
+ 继承与多态的分析与设计
+
+
 2.2 shopping basket management system version 4 (inheritance and polymorphism)
 2.2.1 inheritance and polymorphism analysis and design
 In the Commodity class, define the id, name, price, num, and discount data member
