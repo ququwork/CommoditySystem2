@@ -4,13 +4,13 @@
 #include<string.h>
 using namespace std;
 int OverseaCommodity::getType()const{
-    return 1; //1 ±íÊ¾º£Íâ¹ºÉÌÆ·
+    return 1; //1 è¡¨ç¤ºæµ·å¤–è´­å•†å“
 }
 string OverseaCommodity::getInfo()const{
     ostringstream ostr;
-    ostr<<getType()<<" "; //ÏÈÊä³öÀàĞÍ±àÂë
-    ostr<<Commodity::getInfo(); //Êä³ö»ùÀàµÄĞÅÏ¢
-    ostr<<discount<<" "<<tariff<<endl; //Êä³ö×ÓÀàĞÅÏ¢
+    ostr<<getType()<<" "; //å…ˆè¾“å‡ºç±»å‹ç¼–ç 
+    ostr<<Commodity::getInfo(); //è¾“å‡ºåŸºç±»çš„ä¿¡æ¯
+    ostr<<discount<<" "<<tariff<<endl; //è¾“å‡ºå­ç±»ä¿¡æ¯
     return ostr.str();
 }
 
@@ -29,7 +29,8 @@ double OverseaCommodity::getNetPrice()const{
 }
 void OverseaCommodity::output()const{
     Commodity::output();
-    cout<<" ÉÌÆ·×Ü¼Û:"<<getNetPrice()<<" (¼Û¸ñ:"
-       <<getPrice()<<", ÊıÁ¿:"<<getNum()<<", ÕÛ¿Û:"
-      <<discount<<", ¹ØË°:"<<tariff<<" )\n";
+    cout<<" å•†å“æ€»ä»·:"<<getNetPrice()<<" (ä»·æ ¼:"
+       <<getPrice()<<", æ•°é‡:"<<getNum()<<", æŠ˜æ‰£:"
+      <<discount<<", å…³ç¨:"<<tariff<<" )\n";
 }
+  
