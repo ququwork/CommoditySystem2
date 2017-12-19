@@ -4,13 +4,13 @@
 #include<string.h>
 using namespace std;
 int ershou::getType()const{
-    return 2; //2 ±íÊ¾¶şÊÖÉÌÆ·
+    return 2; //2 è¡¨ç¤ºäºŒæ‰‹å•†å“
 }
-string ershou::getInfo()const{
+string ershou::getInfo()const{  
     ostringstream ostr;
-    ostr<<getType()<<" "; //ÏÈÊä³öÀàĞÍ±àÂë
-    ostr<<Commodity::getInfo(); //Êä³ö»ùÀàµÄĞÅÏ¢
-    ostr<<discount<<" "<<zhejiu<<endl; //Êä³ö×ÓÀàĞÅÏ¢
+    ostr<<getType()<<" "; //å…ˆè¾“å‡ºç±»å‹ç¼–ç 
+    ostr<<Commodity::getInfo(); //è¾“å‡ºåŸºç±»çš„ä¿¡æ¯
+    ostr<<discount<<" "<<zhejiu<<endl; //è¾“å‡ºå­ç±»ä¿¡æ¯
     return ostr.str();
 }
 
@@ -31,7 +31,7 @@ double ershou::getNetPrice()const{
 }
 void ershou::output()const{
     Commodity::output();
-    cout<<" ÉÌÆ·×Ü¼Û:"<<getNetPrice()<<" (¼Û¸ñ:"
-       <<getPrice()<<", ÊıÁ¿:"<<getNum()<<", ÕÛ¿Û:"
-      <<discount<<", ÕÛ¾É:"<<zhejiu<<" )\n";
+    cout<<" å•†å“æ€»ä»·:"<<getNetPrice()<<" (ä»·æ ¼:"
+       <<getPrice()<<", æ•°é‡:"<<getNum()<<", æŠ˜æ‰£:"
+      <<discount<<", æŠ˜æ—§:"<<zhejiu<<" )\n";
 }
