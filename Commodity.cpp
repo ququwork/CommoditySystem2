@@ -2,7 +2,7 @@
 #include "commodity.h"
 using namespace std;
 #include <sstream>
-string Commodity::getInfo()const{
+string Commodity::getInfo()const{  
     ostringstream ostr;
     ostr<<getId()<<endl;
     ostr<<getName()<<endl;
@@ -23,6 +23,6 @@ double Commodity::getNetPrice()const{
 }
 
 void Commodity::output()const{
-    cout<<" 商品编号(id):"<<id<<endl;
-    cout<<" 商品名称:"<<name<<endl;
+    cout<<" 脡脤脝路卤脿潞脜(id):"<<id<<endl;
+    cout<<" 脡脤脝路脙没鲁脝:"<<name<<endl;
 }
